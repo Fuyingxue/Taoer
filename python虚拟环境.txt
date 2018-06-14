@@ -1,0 +1,34 @@
+Python2.x及Python3.3 参考(http://www.tendcode.com/article/virtualenv-for-python/)
+
+python3.3 以上版本适用
+1.创建虚拟环境：
+	mkdir xxx
+	cd xxx
+	python3 -m venv .
+	# python3 -m venv xxoo // 使用venv模块创建一个名为xxoo的虚拟环境(文件夹名字xxoo)
+
+ xxx                         xxx
+   │  pyvenv.cfg               |-xxoo
+   │                                 |  pyvenv.cfg  
+   ├─Include                         |-Include         
+   ├─Lib                             |-Lib 
+   └─Scripts                         |-Scripts   
+
+
+2.启动虚拟环境
+	cd Scripts   
+	activate.bat 
+
+3.安装模块
+	查看已有的模块  pip list
+	注意：
+		python -m pip install --upgrade pip  更新pip
+		pip install --upgrade pip 命令在虚拟环境里禁用
+
+4.退出模块
+	cd Scripts
+	deactivate.bat
+
+
+Pycharm添加虚拟环境 
+	File-->setting-->Project-->Add local-->xxx(虚拟环境的路径)-->Scripts-->python.exe
