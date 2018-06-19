@@ -72,10 +72,10 @@ pipenv 新款Python虚拟环境工具详解
 
 
 三、使用
-	进入你的Python项目文件夹：
-
-	cd your_project
-	pipenv install
+	
+	新建一个项目目录或切换到已有项目目录
+	mkdir myproject
+	cd myproject
 
 
 	pipenv install xxxx    # 安装模块
