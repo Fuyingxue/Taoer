@@ -32,3 +32,58 @@ python3.3 以上版本适用
 
 Pycharm添加虚拟环境 
 	File-->setting-->Project-->Add local-->xxx(虚拟环境的路径)-->Scripts-->python.exe
+	
+
+# ##### ##############################################
+######################################################
+官方文档：https://github.com/pypa/pipenv
+
+参考：	http://www.liujiangblog.com/blog/18/
+		https://blog.csdn.net/chroming/article/details/77104873
+		https://juejin.im/post/5a41a654518825258a5fe3f7
+
+pipenv 新款Python虚拟环境工具详解
+
+一、安装pipenv
+
+	windows下：
+	pip install pipenv
+
+	Linux下：
+	sudo pip install pipenv
+
+	在苹果操作系统下：
+	$ brew install pipenv
+
+二、 新建虚拟环境
+
+	pipenv --two  # --two表示用Python2建立虚拟环境
+	pipenv --three #--three表示用Python3建立
+
+	Windows平台上假如无法运行以上
+		pipenv --python "C:\Python27\python2.exe"    
+		# C:\Python27\python2.exe 为本地的python路径.
+		pipenv --python "C:\Program Files\Python35\python3.exe"
+
+		或者
+		pipenv --python2
+		pipenv --python3
+
+
+
+三、使用
+	进入你的Python项目文件夹：
+
+	cd your_project
+	pipenv install
+
+
+	pipenv install xxxx    # 安装模块
+	pipenv uninstall xxoo  # 卸载模块
+
+	pipenv install xxx --dev 	# 安装一个开发环境中才使用的包
+	pipenv install --dev        # 安装开发环境依赖
+	pipenv uninstall --all      # 卸载所有的包
+
+	pipenv lock   # 打包(更新)
+	pipenv shell  # 进入虚拟环境
